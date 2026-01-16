@@ -1,0 +1,25 @@
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: var(--space-lg) 0;
+    margin-top: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    text-align: center;
+}
+
+.copy {
+    font-size: 0.875rem;
+    color: var(--foreground);
+    opacity: 0.6;
+}
+
+@media (prefers-color-scheme: dark) {
+    .footer {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}

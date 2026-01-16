@@ -1,0 +1,110 @@
+:root {
+  /* Brand Colors - HSL */
+  --primary-h: 225;
+  --primary-s: 70%;
+  --primary-l: 55%;
+  --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+
+  --secondary-h: 180;
+  --secondary-s: 70%;
+  --secondary-l: 45%;
+  --secondary: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
+
+  --accent-h: 30;
+  --accent-s: 90%;
+  --accent-l: 60%;
+  --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+
+  /* Neutral Colors */
+  --background-h: 210;
+  --background-s: 20%;
+  --background-l: 98%;
+  --background: hsl(var(--background-h), var(--background-s), var(--background-l));
+
+  --foreground-h: 220;
+  --foreground-s: 20%;
+  --foreground-l: 10%;
+  --foreground: hsl(var(--foreground-h), var(--foreground-s), var(--foreground-l));
+
+  /* Surfaces */
+  --surface-h: 0;
+  --surface-s: 0%;
+  --surface-l: 100%;
+  --surface: hsl(var(--surface-h), var(--surface-s), var(--surface-l));
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-h: 220;
+    --background-s: 20%;
+    --background-l: 10%;
+    
+    --foreground-h: 210;
+    --foreground-s: 20%;
+    --foreground-l: 98%;
+
+    --surface-h: 220;
+    --surface-s: 20%;
+    --surface-l: 15%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  cursor: pointer;
+}
